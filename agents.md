@@ -6,6 +6,20 @@ Guía práctica para trabajar en la maquetación estática de **LABS24K** (divis
 
 ---
 
+## 0. Flujo de trabajo en Git (obligatorio)
+
+- **Nunca subir directo a `main`**. Un hook local (`pre-push`) lo bloquea.
+- Flujo: `feature/<descripción>` → `develop` → `main` (vía **Pull Request**).
+- Ramas: `main` (producción, solo PRs aprobados), `develop` (integración), `feature/*` (trabajo).
+- Pasos:
+  1. `git switch -c feature/<descripcion>` desde `develop`.
+  2. Commitear y hacer push (`git push -u origin feature/<descripcion>`).
+  3. Abrir PR hacia `develop` con `gh pr create` y mergear.
+  4. Cuando `develop` esté estable, PR de `develop` → `main`.
+- `develop` es la rama por defecto de trabajo local (debe existir en local y remoto).
+
+---
+
 ## 1. Archivos del proyecto
 
 ```
@@ -19,6 +33,8 @@ labs24k/
 ├── contacto.html                  # Página Contacto (formulario)
 ├── login.html                     # Página Login (pantalla de acceso)
 ├── design.md                      # Spec canónica del design system "Sovereign Command"
+├── .githooks/
+│   └── pre-push                   # Bloquea push directo a main (regla local)
 ├── js/
 │   └── main.js                    # JS vanilla: menú móvil (toggle fullscreen)
 ├── images/
