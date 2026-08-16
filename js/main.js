@@ -6,7 +6,6 @@
 
   var toggle = header.querySelector(".site-header__toggle");
   var nav = header.querySelector(".site-header__nav");
-  var icon = toggle ? toggle.querySelector(".material-symbols-outlined") : null;
   var body = document.body;
 
   function setOpen(open) {
@@ -14,9 +13,6 @@
     body.classList.toggle("has-menu-open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
     toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
-    if (icon) {
-      icon.textContent = open ? "close" : "menu";
-    }
   }
 
   if (toggle) {

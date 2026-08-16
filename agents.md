@@ -51,6 +51,7 @@ labs24k/
 - El CSS se divide en secciones numeradas: 1) tokens, 2) reset, 3) tipografía, 4) layout, 5) efectos, 6) componentes, 7) bloques, 8) accesibilidad.
 - **Imágenes de sectores** (`images/sectors/*.png`): son PNG convertidos desde el sitio real (originalmente JPEG); úsalos localmente, no apuntes a URLs del sitio real para recursos internos.
 - **Tratamiento de tarjetas "tech"**: todas las cards (`agent-card`, `sector-card`, `department-card`, `news-card`, `case-card`, `stat`, `feature-card`, `module`, `service-card`, `step`, `use-case`, `clone__card`, `metric-card`) comparten gradiente de fondo sutil + glow radial cyan en esquina (`::before`) + hover `translateY(-4px)` con glow. Mantener este patrón en tarjetas nuevas.
+- **Iconos = SVG inline (Lucide-style)**: sin fuentes de iconos (Material Symbols eliminado). Cada icono es `<svg class="icon ..." viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">`. Tamaños: `.icon` 1.5rem, `.icon--sm` 1rem, `.icon--lg` 2.25rem, `.icon--xl` 4rem. Iconos con cajón (`.sector-card__icon`) mantienen width/height propios del bloque; nunca usar `font-size` para dimensionar SVGs. Redes sociales del footer usan `.icon--brand` (fill `currentColor`, logos de marca). El toggle del menú usa dos SVGs (`.site-header__toggle-icon--menu` / `--close`) intercambiados por CSS según `.is-open`.
 
 ---
 
