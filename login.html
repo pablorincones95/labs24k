@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labs24k | Liderando la Revolución de la IA Soberana en España</title>
+  <meta name="description" content="Bienvenido a Labs24k — Accede a tu panel de control IA. Portal de acceso seguro para operadores y clientes." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#login-form">Saltar al contenido</a>
+
+  <div class="scanline" aria-hidden="true"></div>
+
+  <!-- ===== Auth / Login ===== -->
+  <main class="auth">
+    <div class="auth__grid" aria-hidden="true"></div>
+
+    <section class="auth-card">
+      <header class="auth-card__header">
+        <img
+          class="auth-card__logo"
+          src="images/logoOficial.svg"
+          alt="Logo de LABS24K" />
+        <h1 class="auth-card__title">Bienvenido a<br />Labs24k</h1>
+        <p class="label-mono auth-card__subtitle auth-card__subtitle--sentence">Accede a tu panel de control IA</p>
+      </header>
+
+      <form class="auth-card__form" id="login-form" action="#" method="post">
+        <div class="auth-card__field">
+          <label class="label-mono auth-card__label" for="email">Email Corporativo</label>
+          <div class="auth-card__control">
+            <span class="material-symbols-outlined auth-card__icon" aria-hidden="true">mail</span>
+            <input class="auth-card__input" id="email" name="email" type="email" placeholder="nombre@empresa.com" required />
+          </div>
+        </div>
+
+        <div class="auth-card__field">
+          <div class="auth-card__label-row">
+            <label class="label-mono auth-card__label" for="password">Contraseña</label>
+            <a class="label-mono auth-card__link" href="index.html">¿Olvidada?</a>
+          </div>
+          <div class="auth-card__control">
+            <span class="material-symbols-outlined auth-card__icon" aria-hidden="true">key</span>
+            <input class="auth-card__input" id="password" name="password" type="password" placeholder="••••••••••••" required />
+          </div>
+        </div>
+
+        <label class="auth-card__remember">
+          <input class="auth-card__checkbox" id="remember" name="remember" type="checkbox" />
+          <span class="label-mono auth-card__remember-text">Mantener sesión iniciada</span>
+        </label>
+
+        <div class="auth-card__actions">
+          <button class="btn btn--primary cta-label auth-card__submit" type="submit">
+            Entrar al Sistema
+            <span class="material-symbols-outlined icon--filled" aria-hidden="true">login</span>
+          </button>
+        </div>
+      </form>
+
+      <p class="body-md auth-card__notice auth-card__notice--plain">
+        Serás redirigido al panel CRM seguro. Si tu navegador muestra un aviso de certificado SSL, contacta con soporte: <a class="auth-card__link" href="mailto:info@labs24k.com">info@labs24k.com</a>
+      </p>
+
+      <div class="auth-card__footer">
+        <p class="label-mono auth-card__prompt">¿Aún no eres cliente?</p>
+        <a class="label-mono auth-card__request" href="contacto.html">[ Solicitar Acceso ]</a>
+        <div class="auth-card__lang">
+          <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/flags/4x3/es.svg" alt="Español" />
+          <span class="label-mono">Language · es</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
